@@ -1,0 +1,740 @@
+/*
+ * Copyright (C) 2019–present Efflux GmbH, https://efflux.de/
+ * Part of the ModernSkin package.
+ *
+ * This software comes with ABSOLUTELY NO WARRANTY. For details, see
+ * the enclosed file COPYING for license information (GPL). If you
+ * did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+ */
+
+/* 
+  Border-color: #e3e7ea
+  Background: #f2f4f5
+  Header: #19475b
+  Header light: #335b6e (lighter for tables: #507689) 
+  Border-bottom active: #4ecac2 (hover: #028b8b)
+  Icon color on white: #028b8b (hover: #335b6e)
+*/
+
+/* General */
+body {
+  background: #f2f4f5;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  color: #444444;
+}
+
+a:hover, a:focus {
+  color: #335b6e;
+}
+
+#Footer {
+  border-top: none;
+}
+
+.BreadCrumb {
+  background-color: #ffffff;
+  box-shadow: 0 0px 0 transparent;
+}
+
+.BreadCrumb li:before {
+  border-left-color: #ffffff;
+}
+
+.BreadCrumb li:after {
+  border-left-color: #e3e7ea;
+}
+
+.Warning {
+  color: red;
+}
+
+.MessageBox {
+  background: #D0E3FA;
+}
+
+.MessageBox.Error {
+  background: #d55c4b;
+}
+
+.MessageBox.Error p, .MessageBox.Error a, .MessageBox.Confirmation p, .MessageBox.Confirmation a {
+  color: #ffffff;
+}
+
+.CallForAction.Fullsize,
+.CallForAction, .cke_dialog_footer_buttons a.cke_dialog_ui_button {
+  border-radius: 3px !important;
+}
+
+.CallForAction span, .cke_dialog_footer_buttons td a.cke_dialog_ui_button span {
+  border: none;
+}
+
+/* Header */
+#Header {
+  background: linear-gradient(#19475b 65%, #ffffff 0%);  /* Use percentages to avoid the navbar filling a white background horizontally. */
+}
+
+#ToolBar a i {
+  color: #ffffff;
+  text-shadow: none;
+}
+
+#ToolBar li.UserAvatar div {
+  background: #507689;
+  box-shadow: rgba(9, 30, 66, 0.28) 0px 4px 8px -2px, rgba(9, 30, 66, 0.3) 0px 0px 1px;
+}
+
+body.Visible-ScreenXL #ToolBar li.UserAvatar div a:hover {
+  background: #19475b;
+}
+
+#ToolBar li.UserAvatar div:after {
+  border-bottom-color: #507689;
+}
+
+#ToolBar li.UserAvatar div span {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid #e3e7ea;
+}
+
+#ToolBar li.UserAvatar .Initials {
+  text-shadow: none;
+  background: #fff;
+  color: #19475b;
+  font-weight: bold;
+}
+
+@keyframes border-fill {
+  0%   { border-bottom: 2px solid #028b8b; }
+  25%  { border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; }
+  50%  { border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; border-top: 2px solid #028b8b; }
+  100% { border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; border-top: 2px solid #028b8b; border-right: 2px solid #028b8b; }
+}
+
+/* Navigation bar */
+#Navigation {
+  width: 100% !important  ;
+}
+
+#NavigationContainer {
+  margin-left: -10px;
+  width: 100%;
+  top: 60px;
+  overflow: initial;
+}
+
+#NavigationContainer ul li {
+  padding: 5px 5px 3px 5px;
+}
+
+.Visible-ScreenXL #NavigationContainer > ul > li:first-child {
+  padding-left: 10px;
+}
+
+#Navigation > .Active > ul {
+  box-shadow: 0 10px 20px 0 rgba(0,20,29,0.2), 0 20px 40px 0 rgba(0,20,29,0.1);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0,20,29,0.2), 0 20px 40px 0 rgba(0,20,29,0.1);
+  background: #ffffff;
+  top: 37px;
+}
+
+#Navigation > .Active > ul > li > a {
+  border-bottom: 0px;
+  font-size: 13px;
+  padding: 12px 24px;
+  color: #222;
+}
+
+#Navigation > .Active > ul > li:hover {
+  background: #028b8b ;
+}
+
+#Navigation > .Active > ul > li:hover > a {
+  color: #ffffff;
+}
+
+#Navigation > li > a {
+  color: #323232 !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+}
+
+#Navigation > li > a:after {
+  background: #4ecac2;
+  height: 2px;
+  bottom: 5px;
+  transition: none;
+}
+
+#Navigation > li > a#GlobalSearchNav i {
+  top: 0;
+}
+
+#Navigation > li:hover > a:after {
+  background: #028b8b;
+} 
+
+/* Dashboard */
+.CanDrag .Header h2, .WidgetSimple > .Header h2, .WidgetSimple > .Header h3 {
+  text-shadow: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgba(0,0,0,.85);
+}
+
+/* Widgets */
+.WidgetSimple {
+  box-shadow: none;
+}
+
+.WidgetSimple .Content {
+  background-color: #ffffff;
+}
+
+.WidgetSimple.QueueOverview > .Content {
+  padding-bottom: 10px;
+}
+
+.WidgetSimple .Buttons {
+  border-top: none;
+}
+
+.WidgetSimple > .Header {
+  border-bottom: none !important;
+  background: #f2f4f5;
+}
+
+.WidgetSimple:not(.SettingsWidget) > .Content, .SettingsWidget > .Header, .BreadCrumb, .ActionRow:not(.Cluster), #OverviewBody {
+  box-shadow: 2px 2px 2px 0px #dedede;
+  -webkit-box-shadow: 2px 2px 2px 0px #dedede;
+}
+
+.Visible-ScreenM .SidebarColumn .WidgetSimple > .Content, .Visible-ScreenM .SidebarColumn .SettingsWidget > .Header {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+#EmptyMessageSmall, #OverviewBody {
+  border: none;
+}
+
+.SettingsWidget > .Header {  /* Exception for settings. */
+  background-color: #ffffff;
+}
+
+.LayoutFixedSidebar.SidebarLast > .SidebarColumn {
+  margin-top: 28px;
+}
+
+.TicketZoom .LayoutFixedSidebar.SidebarLast > .SidebarColumn {
+  margin-top: -29px;
+}
+
+.FormScreen .LayoutFixedSidebar.SidebarLast > .SidebarColumn {
+  margin-top: 0px;
+}
+
+.UnreadArticles i::before, .WidgetAction i, .AdditionlFieldIcon {
+  color: #028b8b;
+}
+
+.AdditionlFieldIcon:hover {
+  color: #335b6e;
+}
+
+.ActionRow {
+  border-bottom: none;
+}
+
+.Actions li.Inactive a {
+  color: #777;
+}
+
+.Actions li a:hover, .Actions li span:hover, .OverviewZoom a:hover {
+  border-color: #4ecac2;
+}
+
+/* Tables */
+.DataTable {
+  border: none;
+  background-color: #f2f4f5;
+}
+
+.DataTable thead th, .TableSmall thead th {
+  text-transform: none;
+  background: #507689;
+  color: #ffffff;
+  border: none;
+  padding: 5px 20px 5px 10px;
+}
+
+.DataTable thead .SortAscending a, .DataTable thead .SortDescending a {
+  color: #ffffff;
+  background: #507689;
+  text-transform: none;
+}
+
+.DataTable thead th a {
+  color: #ffffff;
+}
+
+.DataTable thead th.Checkbox, .TableSmall thead th.Checkbox {
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.DataTable thead th.UnreadArticles {
+  padding: 0 0 8px 0px;
+}
+
+.DataTable thead th.UnreadArticles span i::before {
+  color: #ffffff;
+}
+
+.TableSmall .Checkbox {
+  margin: 0 0 3px 0;
+}
+
+.TableSmall thead th a, .TableSmall thead th span {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.Overview table tbody tr td.Checkbox {
+  padding-left: 15px;
+  padding-top: 6px;
+}
+
+.DataTable thead th:not(.CustomerCompanyName):hover, .TableSmall thead th:not(.Sender):not(.CustomerCompanyName):hover {
+  background-color: #19475b;
+}
+
+.DataTable thead th.DashboardHeader, .TableSmall thead th.OverviewHeader,
+.Sortable.DataTable th a, .Sortable.DataTable th span {
+  padding: 3px 20px 3px 9px;
+}
+
+.DataTable thead th a, .DataTable thead tr span, .DataTable thead th {
+  font-weight: bold;
+}
+
+.DataTable tbody tr td div, .DataTable tbody tr td a, .DataTable tbody td {
+  font-size: 12px;
+}
+
+.DataTable thead .SortDescendingLarge a, .DataTable thead .SortAscendingLarge a, .DataTable thead .SortDescendingLarge a,
+.TableSmall thead .SortAscendingLarge a, .TableSmall thead .SortDescendingLarge a {
+  font-weight: normal;
+}
+
+span.UnreadArticles i:first-child, div.UnreadArticles i:first-child {
+  display: none;
+}
+
+span.UnreadArticles i, div.UnreadArticles i {
+  left: 2px;
+  top: 2px;
+}
+
+.WidgetAction:hover i, .WidgetAction a:focus i {
+  color: #335b6e !important;
+} 
+
+.DataTable tbody td, .TableSmall td, ul.Tablelike li {
+  background: #f2f4f5;
+  border: none;
+  padding: 6px 8px 3px 10px;
+}
+
+.DataTable tr:nth-child(even) td, .TableSmall tr:nth-child(even) td, ul.Tablelike li:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.DataTable tbody tr:hover td, .TableSmall tbody tr:hover td, .DataTable tbody tr:active td.Clickable, 
+.TableSmall tbody tr:active td.Clickable, .DataTable tr:nth-child(even):hover td.Highlight,
+ul.Tablelike li:not(.Header):hover {
+  background: #D0E3FA !important;
+}
+
+.DataTable thead th.DashboardHeader a, .TableSmall thead th.OverviewHeader a, .DataTable thead th.DashboardHeader span.Gray,
+.DataTable thead th.DashboardHeader .ColumnSettingsTrigger i, .TableSmall thead th.OverviewHeader .ColumnSettingsTrigger i,
+.DataTable thead th.DashboardHeader.FilterActive .ColumnSettingsTrigger i, .DataTable thead th.DashboardHeader .ColumnSettingsTrigger.Active i, 
+.TableSmall thead th.OverviewHeader.FilterActive .ColumnSettingsTrigger i, .TableSmall thead th.OverviewHeader .ColumnSettingsTrigger.Active i, 
+.TableSmall thead span.Gray, .DataTable thead th {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.DataTable thead .SortDescendingLarge > a:after, .TableSmall thead .SortDescendingLarge > a:after,
+.DataTable thead .SortAscendingLarge > a:after, .TableSmall thead .SortAscendingLarge > a:after {
+  text-shadow: none;
+  left: auto;
+}
+
+.DataTable thead th.DashboardHeader.SortDescendingLarge, .DataTable thead th.DashboardHeader.SortAscendingLarge,
+.TableSmall thead th.OverviewHeader.SortDescendingLarge, .TableSmall thead th.OverviewHeader.SortAscendingLarge {
+  padding-left: 5px;
+}
+
+.DataTable thead th.DashboardHeader.FilterActive .ColumnSettingsTrigger, 
+.DataTable thead th.DashboardHeader .ColumnSettingsTrigger:hover, 
+.DataTable thead th.DashboardHeader .ColumnSettingsTrigger.Active, 
+.TableSmall thead th.OverviewHeader.FilterActive .ColumnSettingsTrigger, 
+.TableSmall thead th.OverviewHeader .ColumnSettingsTrigger:hover, 
+.TableSmall thead th.OverviewHeader .ColumnSettingsTrigger.Active {
+  box-shadow: 1px 1px 1px #ffffff inset, -1px -1px 1px #ffffff inset;
+}
+
+.DataTable thead th.DashboardHeader .ColumnSettingsBox, .TableSmall thead th.OverviewHeader .ColumnSettingsBox {
+  background-color: #f2f4f5;
+  box-shadow: none;
+}
+
+ul.Tablelike {
+  border: none;
+}
+
+ul.Tablelike li.Header {
+  text-transform: none;
+  background: #507689;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 3px 10px;
+}
+
+.FilterInputContainer {
+  border-left: none !important;
+  border-right: none !important;
+  background-color: #f2f4f5 !important;
+}
+
+/* Dialog */
+.Dialog > .Header {
+  color: #ffffff;
+  background: #335b6e;
+  border-bottom: 1px solid #e3e7ea;
+}
+
+.Dialog > .Header .Close, .Dialog > .Header .Close:hover i {
+  color: #ffffff;
+}
+
+.Dialog > .Content {
+  background: #f2f4f5;
+}
+
+.Dialog > .Content > .ContentFooter {
+  background: #f2f4f5;
+  border-top: 1px solid #e3e7ea;
+}
+
+.Dialog > .Footer {
+  background: #ffffff;
+}
+
+/* Pop-up */
+.LayoutPopup > .Content {
+  background-color: #f2f4f5;
+}
+
+.LayoutPopup > .Header {
+  background: #ffffff;
+  border-bottom: 1px solid #e3e7ea;
+}
+
+.LayoutPopup > .Footer {
+  border-top: 1px solid #e3e7ea;
+  background: #ffffff;
+}
+
+div.InputField_ToolbarContainer {
+  background-color: #f2f4f5;
+}
+
+div.InputField_ToolbarContainer ul li a:hover {
+  border-bottom: 2px solid #444444;
+}
+
+/* Form */
+.cke_top {
+  border-bottom: none !important;
+  background: #ffffff !important;
+}
+
+.cke_toolbox .cke_toolbar_last:last-child {
+  border-bottom: 1px solid #dfe4e7 !important;
+  width: 100%;
+}
+
+.cke_bottom {
+  border-top: none !important;
+  background: #ffffff !important;
+}
+
+fieldset > legend > span {
+  border-bottom: none;
+}
+
+fieldset.TableLike.Narrow > label, fieldset.TableLike.Narrow > .Row > label, 
+fieldset.TableLike.Narrow > .Value, fieldset.TableLike.Narrow > .Row > .Value, 
+fieldset.TableLike > label, fieldset.TableLike > .Row > label {
+  font-size: 12px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus {
+  border-color: #4d90fe;
+}
+
+.InputField_InputContainer:before {
+  font-family: FontAwesome;
+  content: "\f107";
+  position: absolute;
+  top: 5px;
+  right: -0px;
+  width: 15px;
+  pointer-events: none;
+}
+
+iframe.Signature, .Content input[type=text], .Content input[type=email], 
+.Content input[type=password], .Content textarea, 
+select[multiple=multiple], form #cke_RichText, div.DnDUpload {
+  border: 1px solid #e3e7ea !important;
+  border-top-color: #e3e7ea !important;
+  -webkit-box-shadow: 3px 3px 1px #f2f0f0;
+  box-shadow: 3px 3px 1px #f2f0f0;
+  background-color: #ffffff;
+}
+
+.AddButton, .RemoveButton {
+  color: #028b8b;
+}
+
+div.InputField_Selection div.Text {
+  background: none;
+}
+
+div.InputField_Selection div.Remove {
+  background: transparent;
+}
+
+div.InputField_Selection div.Remove a {
+  color: grey;
+  font-size: 12px;
+  padding: 0;
+}
+
+.jstree-InputField .jstree-wholerow-ul .jstree-wholerow-clicked {
+  background-color: #e3e7ea !important;
+}
+
+.jstree-InputField .jstree-wholerow-ul .jstree-wholerow:hover, .jstree-InputField .jstree-wholerow-ul .jstree-wholerow-hovered, 
+.jstree-InputField .jstree-focused > .jstree-wholerow {
+  background-color: #D0E3FA;
+}
+
+/* Ticket view */
+.Avatar {
+  border: none;
+}
+
+#ArticleTable.DataTable tbody td {
+  border-right-style: none;
+}
+
+.UseArticleColors #ArticleTable thead a {
+  color: #ffffff;
+}
+
+.UseArticleColors tr:hover > td {
+  background-color: #d0e3fa !important
+}
+
+.OverviewBox > h1 {
+  color: #555;
+}
+
+.OverviewControl {
+  background-color: transparent;
+}
+
+.ControlRow {
+  background-color: #f2f4f5;
+}
+
+.ControlRow li:hover {
+  background: transparent;
+}
+
+.ControlRow li.Active, .ControlRow li.Active:hover, .ControlRow li.Active:active {
+  background: #507689;
+}
+
+.OverviewZoom a {
+  background: #f2f4f5;
+}
+
+.OverviewZoom a:hover {
+  background: #4ecac2;
+}
+
+.OverviewZoom .Active a, .OverviewZoom .Active a:hover {
+  background: #507689;
+}
+
+.OverviewActions, #EmptyMessageSmall, #EmptyMessageLarge {
+  background: #ffffff;
+}
+
+.OverviewMedium > li:nth-child(odd), .OverviewLarge > li:nth-child(odd) {
+  background-color: #f2f4f5;
+}
+
+.OverviewMedium > li:nth-child(even), .OverviewLarge > li:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.OverviewMedium li:hover div.Content, .OverviewMedium li:hover, .OverviewLarge > li:hover > .Content, .OverviewLarge > li:hover {
+  border-left-color: #d0e3fa !important;
+}
+
+.OverviewMedium li ul.InlineActions, .OverviewLarge li ul.InlineActions {
+  background-color: #507689;
+}
+
+ul.ContextFunctions li.ContextSettings .fa {
+  color: #028b8b;
+}
+
+ul.ContextFunctions li.ContextSettings:hover .fa {
+  color: #335b6e;
+}
+
+.Cluster ul ul {
+  background: #fff !important;
+}
+
+/* Calendar */
+#OverviewControl .ActionRow {
+  background: #ffffff;
+}
+
+/* Settings */
+.WidgetSimple.Setting .Content .SettingUpdateBox {
+  background-color: #ffffff !important;
+}
+
+.Setting.IsLockedByMe .NotificationList tbody tr input {
+  margin-right: 10px;
+}
+
+/* Admin */
+.ItemListGrid > li {
+  width: 19.3%;
+  border: none !important;
+}
+
+.ItemListGrid.WithIcons > li > a {
+  background: #ffffff;
+  border: 1px solid #e3e7ea;
+}
+
+.ItemListGrid > li > a:not(.Disabled):hover, .ItemListGrid > li > a:not(.Disabled):active, 
+.ItemListGrid > li > a:not(.Disabled):focus, .ItemListGrid > li > a.Active {
+  background: #D0E3FA;
+  border: 1px solid #e3e7ea;
+}
+
+.ItemListGrid.WithIcons > li a:not(.Disabled):hover span.Icons, .ItemListGrid.WithIcons > li a.Active span.Icons,
+.ItemListGrid.WithIcons > li a:not(.Disabled) span.Icons, .ItemListGrid.WithIcons > li a.Active span.Icons i.Icon2 {
+  background: transparent;
+}
+
+.ItemListGrid.WithIcons > li a:not(.Disabled) span.Icons i {
+  color: #19475b;
+}
+
+.ItemListGrid.WithIcons > li a:not(.Disabled) span.Icons i.Icon2,
+.ItemListGrid.WithIcons > li a:not(.Disabled):hover span.Icons i.Icon2 {
+  background: #19475b;
+  color: #ffffff;
+}
+
+.ItemListGrid > li span.Icons, .ItemListGrid.WithIcons > li span.Icons i.Icon2 {
+  border: 1px solid #19475b;
+}
+
+.ItemListGrid > li.IsFavourite > a {
+  box-shadow: 0px 0px 3px #028b8b !important;
+  border-color: #028b8b !important;
+}
+
+.ItemListGrid > li > a:hover > .Favourite:hover .fa {
+  color: #028b8b !important;
+}
+
+#CommunicationList > .Content > .ControlRow {
+  background: #f2f4f5;
+}
+
+.SearchBox button {
+  background: #ffffff;
+  border: 1px solid #e3e7ea;
+  border-left: none;
+  text-shadow: none;
+}
+
+.SearchBox button:hover {
+  border-color: #e3e7ea;
+}
+
+.IntroInstall {
+  background: transparent !important;
+}
+
+.WidgetSimple .WidgetMenu:not(.Hidden) {
+  background: #fff !important;
+  border-bottom: 1px solid #e3e7ea !important;
+}
+
+.GettingStarted li {
+  background: #f2f4f5;
+  border: 1px solid #e3e7ea;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 0px) {
+  #Header, .LayoutFixedSidebar.SidebarLast .ResponsiveSidebarContainer > .SidebarColumn, 
+  .LayoutFixedSidebar.SidebarFirst .ResponsiveSidebarContainer > .SidebarColumn,
+  #NavigationContainer, .RTL #NavigationContainer  {
+    background: #19475b !important;
+  }
+
+  #Navigation > li > a {
+    color: #ffffff !important;
+  }
+
+  .ResponsiveHandle {
+    color: #028b8b !important;
+    background-color: #19475b !important;
+  }
+
+  #ToolBar, .RTL #ToolBar {
+    background: #19475b !important;
+  }
+
+  #ToolBar li.UserAvatar div {
+    box-shadow: none !important;
+  }
+
+  #ToolBar li i {
+    color: #ffffff !important;
+  }
+}
