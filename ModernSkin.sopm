@@ -19,15 +19,14 @@
 <otrs_package version="1.0">
   <Name>&internal_name;</Name>
   <Version>6.0.1</Version>
-  <Framework Minimum="6.0.0">6.0.x</Framework>
+  <Framework>6.0.x</Framework>
+  <PackageIsDownloadable>0</PackageIsDownloadable>
   <Vendor>Efflux GmbH</Vendor>
   <URL>https://efflux.de/</URL>
-  <BuildDate>2019-08-28</BuildDate>
-  <BuildHost>https://portal.efflux.de</BuildHost>
   <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
   <Description Lang="en">&description_en;</Description>
   <Description Lang="de">&description_de;</Description>
-  <ChangeLog Version="6.0.1" Date="2019-08-28">Release for OTRS 6.</ChangeLog>
+  <ChangeLog Version="6.0.1" Date="2019-08-31">Release for OTRS 6.</ChangeLog>
   <Filelist>
     <File Permission="660" Location="Kernel/Config/Files/XML/ModernSkin.xml"/>
     <File Permission="660" Location="var/httpd/htdocs/skins/Agent/ModernSkin/css/Core.Default.css"/>
