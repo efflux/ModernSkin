@@ -18,7 +18,7 @@
 ]>
 <otrs_package version="1.0">
   <Name>&internal_name;</Name>
-  <Version>6.0.1</Version>
+  <Version>6.0.2</Version>
   <Framework>6.0.x</Framework>
   <PackageIsDownloadable>0</PackageIsDownloadable>
   <Vendor>Efflux GmbH</Vendor>
@@ -26,6 +26,7 @@
   <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
   <Description Lang="en">&description_en;</Description>
   <Description Lang="de">&description_de;</Description>
+  <ChangeLog Version="6.0.2" Date="2019-10-07">Complete rework of the desin.</ChangeLog>
   <ChangeLog Version="6.0.1" Date="2019-08-31">Release for OTRS 6.</ChangeLog>
   <Filelist>
     <File Permission="660" Location="Kernel/Config/Files/XML/ModernSkin.xml"/>
@@ -41,7 +42,7 @@
     <strong>To do before deployment</strong>
     <ul>]]>&deployment_en;<![CDATA[</ul><br><br>
     <p>]]>&feedback_en;<![CDATA[</p><br><br>
-    <p><a href='https://efflux.de/' target='_blank'><img alt='Efflux Logo' src=']]>&efflux_logo;<![CDATA['></a></p>
+    <p><a href='https://efflux.de/en/' target='_blank'><img alt='Efflux Logo' src=']]>&efflux_logo;<![CDATA['></a></p>
     <span class='CreatedAndMaintained'>Created and provided by Efflux GmbH</span>
   ]]></IntroInstall>
   <IntroInstall Type="post" Title="&internal_name; installiert" Lang="de"><![CDATA[
@@ -65,7 +66,7 @@
     <strong>To do after uninstalling</strong>
     <ul>]]>&uninstall_en;<![CDATA[</ul><br><br>
     <p>]]>&feedback_en;<![CDATA[</p><br><br>
-    <p><a href='https://efflux.de/' target='_blank'><img alt='Efflux Logo' src=']]>&efflux_logo;<![CDATA['></a></p>
+    <p><a href='https://efflux.de/en/' target='_blank'><img alt='Efflux Logo' src=']]>&efflux_logo;<![CDATA['></a></p>
     <span class='CreatedAndMaintained'>Created and provided by Efflux GmbH</span>
   ]]></IntroUninstall>
   <IntroUninstall Type="pre" Title="&internal_name; deinstallieren" Lang="de"><![CDATA[
