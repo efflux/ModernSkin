@@ -143,7 +143,7 @@ a:hover, a:focus {
 }
 
 #ToolBar li.UserAvatar div a {
-  color: #757575;
+  color: #444444;
 }
 
 body.Visible-ScreenXL #ToolBar li.UserAvatar div a:hover {
