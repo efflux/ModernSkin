@@ -8,511 +8,536 @@
  */
 
 /* 
-  Background: #f2f4f5; Second: #ffffff
-  Header: #19475b
-  Border: #e3e7ea
-  Icons: #19475b; Hover: #028b8b
-  Text/a: #444444; Hover: #335b6e
+	Background: #f2f4f5; Second: #ffffff
+	Header: #19475b
+	Border: #e3e7ea; Active: #4d90fe
+	Icons: #19475b; Clickable Hover: #028b8b
+	Text/a: #444444; Hover: #335b6e
 
-  Border radius: 3px
-  TODO
-        Replace background #ffffff with transparent.
-        Replace font size px with em.
+	Border radius: 3px
 */
 
 /* General */
 body {
-  background: #f2f4f5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: #f2f4f5;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
-  color: #444444;
+	color: #444444;
 }
 
 a:hover, a:focus {
-  color: #335b6e;
+	color: #335b6e;
 }
 
 #Footer {
-  border-top: none;
+	border-top: none;
 }
 
 .BreadCrumb {
-  box-shadow: 0 0px 0 transparent;
-  padding: 7px 15px 4px 0px !important;
+	box-shadow: 0 0px 0 transparent;
+	padding: 7px 15px 4px 0px !important;
 }
 
 .BreadCrumb a:after {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .BreadCrumb li:before {
-  border-left-color: #ffffff;
+	border-left-color: #ffffff;
 }
 
 .BreadCrumb li:after {
-  border-left-color: #f2f4f5;
+	border-left-color: #f2f4f5;
 }
 
 .BreadCrumb li:first-child a i {
-  color: #19475b;
+	color: #19475b;
 }
 
 .BreadCrumb li:first-child a:hover i {
-  color: #028b8b;
+	color: #028b8b;
 }
 
 .Warning {
-  color: red;
+	color: #d55c4b;
 }
 
 .MessageBox {
-  background: #D0E3FA;
+	background: #D0E3FA;
 }
 
 .MessageBox.Error {
-  background: #d55c4b;
+	background: #d55c4b;
 }
 
 .MessageBox.Error p, .MessageBox.Error a, .MessageBox.Confirmation p, .MessageBox.Confirmation a {
-  color: #ffffff;
+	color: #ffffff;
+}
+
+/* Login */
+.LoginScreen .ErrorBox, .LoginScreen .SuccessBox {
+	border-radius: 3px;
 }
 
 /* Button */
 .CallForAction.Fullsize,
 .CallForAction, .cke_dialog_footer_buttons a.cke_dialog_ui_button {
-  border-radius: 3px !important;
-  -webkit-border-radius: 3px !important;
-  background: #e9ecec;
-  border-bottom: none;
-  border: 1px solid #e3e7ea;
-  transition: none;
+	border-radius: 3px !important;
+	background: #e9ecec;
+	border-bottom: none;
+	border: 1px solid #e3e7ea;
+	transition: none;
 }
 
 .CallForAction.Primary:not([disabled='disabled']) {
-  background: #335b6e;
-  border: 1px solid transparent;
+	background: #028b8b;
+	border: 1px solid transparent;
+	min-width: 100px;
 }
 
 .CallForAction span, .cke_dialog_footer_buttons td a.cke_dialog_ui_button span {
-  border: none;
-  text-shadow: none;
-  color: #757575;
-  padding: 6px 7px 6px;
+	border: none;
+	text-shadow: none;
+	color: #757575;
+	padding: 6px 7px 6px;
 }
 
 .CallForAction.Primary span {
-  color: #f2f4f5;
+	color: #f2f4f5;
 }
 
 .CallForAction:active, .CallForAction:hover, .CallForAction:focus {
-  background: #e9ecec;
-  border-color: #cccfd2;
+	background: #e9ecec;
+	border-color: #c6c6c6;
 }
 
 .CallForAction:active span, .CallForAction:hover span, .CallForAction:focus span {
-  color: #212121;
+	color: #212121;
 }
 
 .CallForAction.Primary:active, .CallForAction.Primary:hover, .CallForAction.Primary:focus {
-  background: #028b8b;
-  border-color: transparent;
+	background: #4ecac2;
+	border-color: transparent;
 }
 
 .CallForAction.Primary:active span, .CallForAction.Primary:hover span, .CallForAction.Primary:focus span {
-  color: #f2f4f5;
+	color: #f2f4f5;
 }
 
 .CallForAction[disabled='disabled'], .CallForAction:hover[disabled='disabled'] {
-  background: #dddddd;
+	background: #e3e7ea;
+	border: 1px solid transparent !important;
+	border-top-color: transparent !important;
 }
 
+.WidgetSimple .WidgetMenu > a, .WidgetSimple .WidgetMenu > span {
+	background: #e9ecec !important;
+	border: 1px solid transparent !important;
+	border-radius: 3px !important;
+}
+
+.WidgetSimple .WidgetMenu > a:hover, .WidgetSimple .WidgetMenu > span:hover {
+	background: #e9ecec !important;
+	border-color: #dfe4e7 !important;
+	color: #212121 !important;
+}
 /* Header */
 #Header {
-  background: linear-gradient(#19475b 65%, #ffffff 0%);  /* Use percentages to avoid the navbar filling a white background horizontally. */
+	background: linear-gradient(#19475b 65%, #ffffff 0%);	/* Use percentages to avoid the navbar filling a white background horizontally. */
 }
 
 #ToolBar a i {
-  color: #e9ecec;
-  text-shadow: none;
+	color: #e9ecec;
+	text-shadow: none;
 }
 
 #ToolBar a span.Counter {
-  color: #e9ecec;
+	color: #e9ecec;
 }
 
 #ToolBar li.UserAvatar div a {
-  color: #444444;
+	color: #444444;
 }
 
 body.Visible-ScreenXL #ToolBar li.UserAvatar div a:hover {
-  background: #D0E3FA;
+	background: #D0E3FA;
 }
 
 #ToolBar li.UserAvatar div:after {
-  border-bottom-color: #ffffff;
+	border-bottom-color: #ffffff;
 }
 
 #ToolBar li.UserAvatar div span {
-  color: #323232;
-  font-weight: bold;
-  border-bottom: 1px solid #e3e7ea;
+	color: #323232;
+	font-weight: bold;
+	border-bottom: 1px solid #e3e7ea;
 }
 
 #ToolBar li.UserAvatar .Initials {
-  text-shadow: none;
-  background: #e9ecec;
-  color: #19475b;
-  font-weight: bold;
+	text-shadow: none;
+	background: #e9ecec;
+	color: #19475b;
+	font-weight: bold;
 }
 
 #ToolBar li.Extended form div.InputField_Container * {
-  color: #444444;
-  z-index: 4;
+	color: #444444;
+	z-index: 4;
 }
 
 #ToolBar li.Extended form div.InputField_Container i {
-  left: -20px;
-  top: -3px;
-  position: relative;
+	left: -20px;
+	top: -3px;
+	position: relative;
 }
 
 #ToolBar .Extended input[type=text] {
-  background: #e9ecec;
+	background: #e9ecec;
 }
 
 @keyframes border-fill {
-  0%   { border-bottom: 2px solid #028b8b; }
-  25%  { border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; }
-  50%  { border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; border-top: 2px solid #028b8b; }
-  100% { border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; border-top: 2px solid #028b8b; border-right: 2px solid #028b8b; }
+	0%		{ border-bottom: 2px solid #028b8b; }
+	25%		{ border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; }
+	50%		{ border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; border-top: 2px solid #028b8b; }
+	100%	{ border-bottom: 2px solid #028b8b; border-left: 2px solid #028b8b; border-top: 2px solid #028b8b; border-right: 2px solid #028b8b; }
 }
 
 /* Navigation bar */
 #Navigation {
-  width: 100% !important  ;
+	width: 100% !important;
 }
 
 #NavigationContainer {
-  margin-left: -10px;
-  width: 100%;
-  top: 60px;
-  overflow: initial;
+	margin-left: -10px;
+	width: 100%;
+	top: 60px;
+	overflow: initial;
 }
 
 #NavigationContainer ul li {
-  padding: 5px 5px 3px 5px;
+	padding: 5px 5px 3px 5px;
 }
 
 #NavigationContainer > a {
-  background: #19475b;
+	background: #19475b;
 }
 
 .Visible-ScreenXL #NavigationContainer > ul > li:first-child {
-  padding-left: 10px;
+	padding-left: 10px;
 }
 
 #Navigation > .Active > ul {
-  top: 24px;
+	top: 24px;
 }
 
 #Navigation > .Active > ul > li {
-  margin: -1px 0px;
+	margin: -1px 0px;
 }
 
 #Navigation > .Active > ul > li > a {
-  border-bottom: 0px;
-  font-size: 13px;
-  padding: 10px;
-  color: #222;
+	border-bottom: none;
+	font-size: 13px;
+	padding: 10px;
+	color: #212121;
 }
 
 #Navigation > .Active > ul > li:hover {
-  background: #D0E3FA;
+	background: #D0E3FA;
 }
 
 #Navigation > li > a {
-  color: #323232 !important;
-  font-weight: bold !important;
-  font-size: 13px !important;
+	color: #323232 !important;
+	font-weight: bold !important;
+	font-size: 13px !important;
 }
 
 #Navigation > li > a:after {
-  background: #19475b;
-  height: 2px;
-  bottom: 5px;
-  transition: none;
+	background: #19475b;
+	height: 2px;
+	bottom: 6px;
+	transition: none;
 }
 
 #Navigation > li > a#GlobalSearchNav i {
-  top: 0;
+	top: 0;
 }
 
 #Navigation > li:hover > a:after {
-  background: #028b8b;
+	background: #028b8b;
 } 
 
 /* Dashboard */
 .CanDrag .Header h2, .WidgetSimple > .Header h2, .WidgetSimple > .Header h3 {
-  text-shadow: none;
-  font-size: 1.2em;
-  font-weight: 600;
-  color: rgba(0,0,0,.85);
+	text-shadow: none;
+	font-size: 1.2em;
+	font-weight: 600;
+	color: #444444;
 }
 
 .DropPlaceholder {
-  border: 1px dashed #e3e7ea;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  margin-top: 10px;
-  margin-left: 3px;
+	border: 1px dashed #e3e7ea;
+	border-radius: 3px;
+	margin-top: 10px;
+	margin-left: 3px;
 }
 
 /* Widgets */
 .WidgetSimple, .OverviewActions, #EmptyMessageSmall, #ToolBar li.UserAvatar div,
 #OverviewBody.Overview.TicketList table.TableSmall.NoCellspacing, #TicketOverviewMedium, #TicketOverviewLarge,
 .LayoutPopup > .Footer, .BreadCrumb, .PreviewContainer .Preview, .GettingStarted li, #Navigation > .Active > ul,
-.OverviewLarge .Preview > ul {
-  background: #ffffff !important;
-  box-shadow: none;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
-  -webkit-box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
-  margin: 10px 3px;
-  padding: 1px 0px;
-  border-radius: 3px !important;
-  -webkit-border-radius: 3px !important;
+.OverviewLarge .Preview > ul, form#NewPhoneTicket, form#NewEmailTicket, #ActivityDialogContent .Centered, 
+#ActivityDialogContent .LayoutPopup > .Content, .Search .Content, .FieldHelpContainer > span {
+	background: #ffffff !important;
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
+	margin: 4px 3px 10px 3px !important;
+	border-radius: 3px !important;
 }
 
 /* Workaround for tables with horizontal scrolling e. g. AgentTicketQueue */
 #OverviewBody.Overview.TicketList table.TableSmall.NoCellspacing {
-  width: 99.5%;
+	width: 99.5%;
 }
 
+.OverviewActions {
+	margin: 3px !important;
+}
+
+.Small #BulkAction {
+	margin-left: 10px;
+} 
+
 .OverviewControl > div {
-  padding: 0 13px 0 5px;
+	padding: 0 13px 0 5px;
 }
 
 #OverviewBody {
-  margin: 10px 9px 10px 5px;
-  border: none;
+	margin: 10px 9px 10px 5px;
+	border: none;
 }
 
 #TicketOverviewMedium, #TicketOverviewLarge {
-  margin: 19px 15px 8px 7px
+	margin: 27px 15px 8px 7px !important;
 }
 
 #EmptyMessageSmall, #EmptyMessageMedium {
-  padding: 5px !important;
+	padding: 10px !important;
 }
 
 .TicketList table {
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 .WidgetSimple.QueueOverview > .Content {
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 .WidgetSimple .Buttons {
-  border-top: none;
+	border-top: none;
 }
 
 .WidgetSimple > .Header {
-  border-bottom: none !important;
+	border-bottom: none !important;
 }
 
 .Visible-ScreenM .SidebarColumn .WidgetSimple > .Content, .Visible-ScreenM .SidebarColumn .SettingsWidget > .Header {
-  box-shadow: none;
-  -webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .SidebarColumn .WidgetSimple:not(.DontPrint) .Content {
-  padding: 4px 4px 8px 6px;
+	padding: 4px 4px 8px 6px;
 }
 
 .QueueOverview {
-  padding: 4px 5px 1px 0px !important;
+	padding: 4px 5px 1px 0px !important;
+	margin: 0 16px 3px 8px !important;
+}
+
+.QueueOverviewSeparator {
+	height: 0px !important;
+	min-height: 0px !important;
 }
 
 #EmptyMessageSmall, #EmptyMessageMedium {
-  border: none;
+	border: none;
 }
 
 .SettingsWidget label input, .SettingsWidget label:hover input {
-  left: -2px !important;
-  top: 2px !important;
+	left: -2px !important;
+	top: 2px !important;
 }
 
 .SettingsWidget label, .SettingsWidget label:hover {
-  background-color: transparent !important;
-  border: none !important;
-  padding: 2px 0px 2px 20px !important;
-  /* margin: 5px !important; */
+	background-color: transparent !important;
+	border: none !important;
+	padding: 2px 0px 2px 20px !important;
 }
 
 .WidgetAction i, .AdditionlFieldIcon, .WidgetAction.Toggle i {
-  color: #19475b !important;
+	color: #19475b !important;
 }
 
 .UnreadArticles:not(.NonTextContent) i::before {
-  color: #757575 !important;
+	color: #757575 !important;
 }
 
 .AdditionlFieldIcon:hover {
-  color: #028b8b !important;
+	color: #028b8b !important;
 }
 
 .ActionRow {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 .SidebarColumn .Actions {
-  padding-left: 5px;
+	padding-left: 5px;
 }
 
 .Actions li.Inactive a {
-  color: #777;
+	color: #777777;
 }
 
 .Actions li a:hover, .Actions li span:hover {
-  border-color: #19475b;
+	border-color: #19475b;
 }
 
 .Tab.Actions li:first-child a {
-  padding-left: 0px;
+	padding-left: 0px;
 }
 
 .Tab.Actions li.Selected a,
 .ControlRow li.Active > a, .ControlRow li.Active:hover > a, .ControlRow li.Active:active > a {
-  font-weight: initial;
-  color: #323232;
-  text-shadow: 0.5px 0px 0px #323232, -0.5px 0px 0px #323232;
+	font-weight: initial;
+	color: #323232;
+	text-shadow: 0.5px 0px 0px #323232, -0.5px 0px 0px #323232;
 }
 
 .Tab.Actions li a:hover {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* Tables */
 .DataTable {
-  border-collapse: collapse;
-  border: none;
-  background-color: transparent;
+	border-collapse: collapse;
+	border: none;
+	background-color: transparent;
 }
 
 .DataTable:not(.DashboardAppointmentCalendar) tbody tr, 
 .TableSmall tbody tr {
-  border-top: 1px solid #e3e7ea !important;
+	border-top: 1px solid #e3e7ea !important;
 }
 
 /* Exception for article table. */
 #ArticleTable tbody tr {
-  border-top: 1px solid #ffffff !important;
+	border-top: 1px solid #ffffff !important;
+	cursor: pointer;
 }
 
 .DataTable thead th, .TableSmall thead th {
-  text-transform: none;
-  background: #ffffff;
-  font-size: 1em;
-  font-weight: bold;
-  color: #757575;
-  font-weight: bold;
-  border: none;
-  padding: 5px 20px 5px 10px;
+	text-transform: none;
+	background: #ffffff;
+	font-size: 1em;
+	color: #757575;
+	font-weight: bold;
+	border: none;
+	padding: 5px 20px 5px 10px;
 }
 
 .DataTable thead .SortAscending a, .DataTable thead .SortDescending a {
-  color: #ffffff;
-  background: transparent;
-  text-transform: none;
+	color: #ffffff;
+	background: transparent;
+	text-transform: none;
 }
 
 .TableSmall thead th input.Checkbox {
-  margin: 0px 0px 4px 12px;
+	margin: 0px 0px 4px 12px;
 }
 
 .DataTable thead th.UnreadArticles {
-  padding: 0 0 8px 0px;
+	padding: 0 0 8px 0px;
 }
 
 .DataTable thead th.UnreadArticles span i::before {
-  color: #ffffff;
+	color: #ffffff;
 }
 
 .TableSmall thead th a, .TableSmall thead th span {
-  padding-top: 2px;
-  padding-bottom: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .Overview table tbody tr td.Checkbox {
-  padding-left: 15px;
-  padding-top: 6px;
+	padding-left: 15px;
+	padding-top: 6px;
 }
 
 .DataTable thead th.DashboardHeader, .TableSmall thead th.OverviewHeader,
 .Sortable.DataTable th a, .Sortable.DataTable th span {
-  padding: 3px 20px 5px 9px;
+	padding: 3px 20px 5px 9px;
 }
 
 .Sortable.DataTable th.SortAscending a, .Sortable.DataTable th.SortDescending a {
-  color: #212121;
+	color: #212121;
 }
 
 .DataTable thead th a, .DataTable thead tr span, .DataTable thead th {
-  font-weight: bold;
-  color: #757575;
+	font-weight: bold;
+	color: #757575;
 }
 
 .DataTable thead .SortDescendingLarge a, .DataTable thead .SortAscendingLarge a, .DataTable thead .SortDescendingLarge a,
 .TableSmall thead .SortAscendingLarge a, .TableSmall thead .SortDescendingLarge a {
-  font-weight: normal;
-  color: #212121 !important;
+	font-weight: normal;
+	color: #212121 !important;
 }
 
 span.UnreadArticles i:first-child, div.UnreadArticles i:first-child {
-  display: none;
+	display: none;
 }
 
 span.UnreadArticles i, div.UnreadArticles i {
-  left: 2px;
-  top: 2px;
+	left: 2px;
+	top: 2px;
 }
 
 .WidgetAction:not(.Toggle):hover i, .WidgetAction:not(.Toggle) a:focus i {
-  color: #028b8b !important;
+	color: #028b8b !important;
 }
 
 .DataTable tbody td, .TableSmall td, ul.Tablelike li:not(.Header) {
-  background: transparent;
-  border: none;
-  padding: 6px 8px 3px 10px;
-  border-top: 1px solid #e3e7ea;
+	background: transparent;
+	border: none;
+	padding: 6px 8px 3px 10px;
+	border-top: 1px solid #e3e7ea;
+}
+
+.DataTable tbody td.EventType {
+	border-top: none !important;
 }
 
 .DataTable tr:nth-child(even) td, .TableSmall tr:nth-child(even) td, ul.Tablelike li:nth-child(even) {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .DataTable tbody tr:hover td, .TableSmall tbody tr:hover td, .DataTable tbody tr:active td.Clickable, 
 .TableSmall tbody tr:active td.Clickable, .DataTable tr:nth-child(even):hover td.Highlight,
 ul.Tablelike li:not(.Header):hover {
-  background: #D0E3FA !important;
+	background: #D0E3FA !important;
 }
 
 .TableSmall tbody .Flags {
-  padding-top: 7px;
+	padding-top: 7px;
 }
 
 span.UnreadArticles, div.UnreadArticles {
-  height: 17px;
+	height: 17px;
 }
 
 /* Not for sidebars. */
 .SidebarColumn .DataTable tbody tr:hover td {
-  background: transparent !important;
+	background: transparent !important;
 }
 
 .DataTable thead th.DashboardHeader a, .TableSmall thead th.OverviewHeader a, .DataTable thead th.DashboardHeader span.Gray,
@@ -520,716 +545,1002 @@ span.UnreadArticles, div.UnreadArticles {
 .DataTable thead th.DashboardHeader.FilterActive .ColumnSettingsTrigger i, .DataTable thead th.DashboardHeader .ColumnSettingsTrigger.Active i, 
 .TableSmall thead th.OverviewHeader.FilterActive .ColumnSettingsTrigger i, .TableSmall thead th.OverviewHeader .ColumnSettingsTrigger.Active i, 
 .TableSmall thead span.Gray {
-  color: #757575;
-  font-size: 1em;
-  font-weight: bold;
-  padding-left: 0px;
-  text-transform: none;
+	color: #757575;
+	font-size: 1em;
+	font-weight: bold;
+	padding-left: 0px;
+	text-transform: none;
+	height: 13px;
+}
+
+.TableSmall thead a, .TableSmall thead span {
+	height: 13px;
 }
 
 .DataTable thead th.DashboardHeader.FilterActive .ColumnSettingsTrigger i, .DataTable thead th.DashboardHeader .ColumnSettingsTrigger.Active i,
 .TableSmall thead th.OverviewHeader.FilterActive .ColumnSettingsTrigger i, .TableSmall thead th.OverviewHeader .ColumnSettingsTrigger.Active i {
-  color: #212121;
+	color: #212121;
 }
 
 .DataTable thead .SortDescendingLarge > a:after, .TableSmall thead .SortDescendingLarge > a:after,
 .DataTable thead .SortAscendingLarge > a:after, .TableSmall thead .SortAscendingLarge > a:after {
-  text-shadow: none;
-  left: auto;
+	text-shadow: none;
+	left: auto;
 }
 
 .DataTable thead th.DashboardHeader.SortDescendingLarge, .DataTable thead th.DashboardHeader.SortAscendingLarge,
 .TableSmall thead th.OverviewHeader.SortDescendingLarge, .TableSmall thead th.OverviewHeader.SortAscendingLarge {
-  padding-left: 9px;
+	padding-left: 9px;
 }
 
 .DataTable thead th.DashboardHeader.SortDescendingLarge[data-column="Priority"],
 .DataTable thead th.DashboardHeader.SortAscendingLarge[data-column="Priority"] {
-  padding-left: 18px;
+	padding-left: 18px;
 }
 
 .DataTable thead th.DashboardHeader.FilterActive .ColumnSettingsTrigger, 
 .DataTable thead th.DashboardHeader .ColumnSettingsTrigger.Active, 
 .TableSmall thead th.OverviewHeader.FilterActive .ColumnSettingsTrigger, 
 .TableSmall thead th.OverviewHeader .ColumnSettingsTrigger.Active {
-  box-shadow: 0 0 0 1px #212121;
+	box-shadow: 0 0 0 1px #212121;
 }
 
 .DataTable thead th.DashboardHeader .ColumnSettingsTrigger, .TableSmall thead th.OverviewHeader .ColumnSettingsTrigger {
-  margin: 0px -15px 0px 0px;
-  opacity: 1;
+	margin: 1px -15px 0px 0px;
+	opacity: 1;
 }
 
 .DataTable thead th.DashboardHeader .ColumnSettingsBox, .TableSmall thead th.OverviewHeader .ColumnSettingsBox {
-  background-color: #f2f4f5;
-  box-shadow: none;
-  border-color: #e3e7ea;
+	background-color: #f2f4f5;
+	box-shadow: none;
+	border-color: #e3e7ea;
 }
 
 .DataTable .Row td.QueueOverviewTotals {
-  text-transform: none;
-  border-top: none;
+	text-transform: none;
+	border-top: none;
 }
 
 ul.Tablelike {
-  border: none;
+	border: none;
 }
 
 ul.Tablelike li.Header {
-  text-transform: none;
-  background: transparent;
-  color: #757575;
-  font-size: 1em;
-  padding: 3px 10px;
+	text-transform: none;
+	background: transparent;
+	color: #757575;
+	font-size: 1em;
+	padding: 3px 10px;
 }
 
 .FilterInputContainer {
-  border: none !important;
-  background-color: transparent !important;
+	border: none !important;
+	background-color: transparent !important;
 }
 
 .FilterInputContainer input {
-  width: 100% !important;
+	width: 100% !important;
 }
 
 /* Dialog */
 .Dialog {
-  background: transparent;
+	background: transparent;
 }
 
 .Dialog > .Header {
-  color: #ffffff;
-  background: #19475b;
-  border-bottom: 1px solid #e3e7ea;
+	color: #ffffff;
+	background: #19475b;
+	border-bottom: 1px solid #e3e7ea;
 }
 
 .Dialog > .Header .Close, .Dialog > .Header .Close:hover i {
-  color: #ffffff;
+	color: #ffffff;
 }
 
 .Dialog > .Content {
-  background: #f2f4f5;
+	background: #f2f4f5;
 }
 
 .Dialog > .Content > .ContentFooter {
-  background: #f2f4f5;
-  border-top: 1px solid #e3e7ea;
+	background: #f2f4f5;
+	border-top: 1px solid #e3e7ea;
 }
 
 .Dialog > .Footer {
-  background: #ffffff;
-  border-color: #e3e7ea;
+	background: #ffffff;
+	border-color: #e3e7ea;
 }
 
 /* Pop-up */
 .LayoutPopup > .Content {
-  background-color: #f2f4f5;
+	background-color: #f2f4f5;
 }
 
 .LayoutPopup > .Header {
-  background: #ffffff;
-  border-bottom: 1px solid #e3e7ea;
+	background: #ffffff;
+	border-bottom: 1px solid #e3e7ea;
 }
 
 .LayoutPopup > .Footer {
-  border: none;
-  margin: 10px 23px;
+	border: none;
+	margin: 10px 23px;
 }
 
 /* Search */
 #SearchProfileAddBlock {
-  padding-top: 5px;
+	padding-top: 5px;
 }
 
 /* Form */
-.cke_top {
-  border-bottom: none !important;
-  background: #ffffff !important;
+.cke_chrome {
+	border: 1px solid #e3e7ea !important;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.cke_resizer {
+	border-color: transparent #e3e7ea transparent transparent !important;
+}
+
+.cke_top, .cke_bottom {
+	border: none !important;
+	background: #ffffff !important;
 }
 
 .cke_toolbox .cke_toolbar_last:last-child {
-  border-bottom: 1px solid #dfe4e7 !important;
-  width: 100%;
-}
-
-.cke_bottom {
-  border-top: none !important;
-  background: #ffffff !important;
+	border-bottom: 1px solid #dfe4e7 !important;
+	width: 100%;
 }
 
 form label.Mandatory span.Marker {
-  font-size: 1em;
-  top: 0;
+	font-size: 1em;
+	top: 0;
+}
+
+label.Negate {
+	background: transparent !important;
+}
+
+label.Negate.Checked {
+	color: #335b6e !important;
+	text-shadow: 0.5px 0px 0px #335b6e, -0.5px 0px 0px #335b6e;
 }
 
 fieldset > legend > span {
-  border-bottom: none;
+	border-bottom: none;
 }
 
 fieldset.TableLike.Narrow > label, fieldset.TableLike.Narrow > .Row > label, 
 fieldset.TableLike.Narrow > .Value, fieldset.TableLike.Narrow > .Row > .Value, 
 fieldset.TableLike > label, fieldset.TableLike > .Row > label {
-  text-shadow: none;
-  font-size: 0.99em; /* Dodge second line on customer information widget. */
+	text-shadow: none;
+	font-size: 0.99em; /* Dodge second line on customer information widget. */
 }
 
 .InputField_InputContainer:before {
-  font-family: FontAwesome;
-  content: "\f107";
-  position: absolute;
-  top: 5px;
-  right: -0px;
-  width: 15px;
-  pointer-events: none;
-  z-index: 5;
+	font-family: FontAwesome;
+	content: "\f107";
+	position: absolute;
+	top: 5px;
+	right: -0px;
+	width: 15px;
+	pointer-events: none;
+	z-index: 5;
 }
 
-div.InputField_TreeContainer, .ui-state-default, .ui-widget-content, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  border: none !important;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  box-shadow: 0 2px 18px 0 rgba(18,52,77,.16), 0 2px 4px 0 rgba(18,52,77,.06);
+div.InputField_TreeContainer, .ui-widget-content, .ui-widget-header .ui-state-default {
+	border: none !important;
+	border-radius: 3px !important;
+	box-shadow: 0 2px 18px 0 rgba(18,52,77,.16), 0 2px 4px 0 rgba(18,52,77,.06);
+}
+
+.ExpandToBottom div.InputField_TreeContainer, .ExpandToTop div.InputField_TreeContainer {
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+.InputField_ListContainer.ExpandToBottom {
+	box-shadow: 0 -4px 2px -2px rgba(18,52,77,.16);
+}
+
+.InputField_ListContainer.ExpandToTop {
+	box-shadow: 0 4px 2px -2px rgba(18,52,77,.16);
 }
 
 div.InputField_ToolbarContainer {
-  background-color: #f2f4f5;
-  box-shadow: 0 2px 18px 0 rgba(18,52,77,.16), 0 2px 4px 0 rgba(18,52,77,.06);
-  border: none !important;
+	background-color: #f2f4f5;
+	border: none !important;
+}
+
+div.InputField_ToolbarContainer ul li a, div.InputField_ToolbarContainer ul li a .fa-check-square-o:before {
+	color: #444444;
 }
 
 div.InputField_ToolbarContainer ul li a:hover {
-  border-bottom: 2px solid #444444;
+	border-bottom: 1px solid #ffffff;
 }
 
 iframe.Signature, input[type=text]:not([readonly]), input[type=email], input[type=password], 
 textarea, select[multiple=multiple], form #cke_RichText, div.DnDUpload {
-  border: 1px solid #e3e7ea !important;
-  border-top-color: #e3e7ea !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background-color: #ffffff;
-  border-radius: 3px !important;
-  -webkit-border-radius: 3px;
+	border: 1px solid #e3e7ea !important;
+	border-top-color: #e3e7ea !important;
+	box-shadow: none;
+	background-color: #ffffff;
+	border-radius: 3px !important;
 }
 
 input[type=text][readonly], input[type=password][readonly], input[type=email][readonly], textarea[readonly] {
-  border: 1px solid transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
+	border: 1px solid transparent;
+	box-shadow: none;
+	border-radius: 3px;
 }
 
 input[type=text]:not([readonly]):focus, input[type=email]:focus, input[type=password]:focus, 
 textarea:focus, select[multiple=multiple]:focus, form #cke_RichText:focus, div.DnDUpload:focus {
-  border-color: #4d90fe !important;
+	border-color: #4d90fe !important;
+}
+
+input::placeholder, input:focus::placeholder {
+	color: #e3e7ea;
+}
+
+input[type=text][disabled=disabled], .InputField_Search[readonly=readonly]:focus {
+	background: #e3e7ea !important;
+	border: 1px solid transparent !important;
+	border-top-color: transparent !important;
 }
 
 .GetAllAJAX {
-  color: #19475b; 
+	color: #19475b; 
 }
 
 .GetAllAJAX:hover {
-  color: #028b8b;
+	color: #028b8b;
 }
 
 a.InputField_Action {
-  right: 20px !important;
-  color: #19475b;
+	right: 20px !important;
+	color: #19475b;
 }
 
 .UseArticleColors #ArticleTable i.fa-spin {
-  color: #19475b;
+	color: #19475b;
 }
 
 a.InputField_Action:hover {
-  color: #028b8b;
+	color: #028b8b;
 } 
 
 .AddButton, .RemoveButton {
-  color: #028b8b;
+	color: #028b8b;
 }
 
 div.InputField_Selection div.Text {
-  background: transparent;
+	background: transparent;
 }
 
 div.InputField_Selection div.Remove {
-  background: transparent;
+	background: transparent;
 }
 
 div.InputField_Selection div.Remove a {
-  color: #028b8b;
+	color: #028b8b;
 }
 
 .AlreadyDisabled div.InputField_Selection div.Text {
-  background: transparent;
+	background: transparent;
 }
 
 .jstree-InputField .jstree-wholerow-ul .jstree-wholerow-clicked {
-  background-color: #D0E3FA !important;
+	background-color: #467b94 !important;
 }
 
 /* Selected node */
 .jstree-InputField .jstree-wholerow-ul .jstree-anchor.jstree-clicked {
-  color: #335b6e !important;
+	color: #ffffff !important;
 }
 
 .jstree-InputField .jstree-wholerow-ul .jstree-wholerow:hover, .jstree-InputField .jstree-wholerow-ul .jstree-wholerow-hovered, 
 .jstree-InputField .jstree-focused > .jstree-wholerow,
 .ui-menu-item:hover, .ui-menu-item:focus, .ui-menu-item:active, .ui-autocomplete .ui-menu-item-wrapper.ui-state-active {
-  background-color: #D0E3FA;
+	background-color: #D0E3FA;
 }
 
 .jstree-InputField-Tree .jstree-wholerow,
-.jstree-InputField .jstree-wholerow-ul .jstree-wholerow  {
-  height: 28px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-}
-
-.ui-menu .ui-menu-item {
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
+.jstree-InputField .jstree-wholerow-ul .jstree-wholerow {
+	height: 28px;
 }
 
 .jstree-InputField .jstree-anchor {
-  padding: 5px !important;
+	padding: 5px !important;
 }
 
 .jstree-InputField-Tree .jstree-node,
 .jstree-InputField-NoTree .jstree-node {
-  padding: 3px 3px 3px 3px;
-  margin: 0px 5px;
+	margin: 0px 5px;
 }
 
 /* Exeption for first and last child. */
 .jstree-InputField-Tree .jstree-node:first-child, .jstree-InputField-NoTree .jstree-node:first-child {
-  padding-top: 0px;
+	padding-top: 0px;
 }
 
 .jstree-InputField-Tree .jstree-node:last-child, .jstree-InputField-NoTree .jstree-node:last-child {
-  padding-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 .jstree-InputField-Tree > .jstree-no-dots .jstree-closed > .jstree-ocl {
-  background-position: -4px -3px;
+	background-position: -4px -3px;
 }
 
 .jstree-InputField-Tree > .jstree-no-dots .jstree-open > .jstree-ocl {
-  background-position: -36px -2px;
+	background-position: -36px -2px;
 }
 
 .CustomerContainer, .CcCustomerContainer, .BccCustomerContainer {
-  background-color: #ffffff;
-  border: 1px solid #e3e7ea;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+	background-color: #ffffff;
+	border: 1px solid #e3e7ea;
+	box-shadow: none;
+	border-radius: 3px;
 }
 
 .CustomerContainer .BoxLabel, .CcCustomerContainer .BoxLabel, .BccCustomerContainer .BoxLabel {
-  text-align: center;
-  text-shadow: none;
-  background-color: #ffffff;
-  border: 1px solid #e3e7ea;
-  border-right: none;
+	text-align: center;
+	text-shadow: none;
+	background-color: #ffffff;
+	border: 1px solid #e3e7ea;
+	border-right: none;
 }
 
 .CustomerContainer .CustomerTicketText.MainCustomer {
-  background-color: #D0E3FA;
-  border: 1px solid #D0E3FA;
+	background-color: #D0E3FA;
+	border: 1px solid #D0E3FA;
 }
 
 /* Ticket view */
+form#NewPhoneTicket, form#NewEmailTicket {
+	padding: 5px 0px 10px 0px;
+}
+
 div.Headline {
-  margin: 5px;
+	margin: 5px;
 }
 
 .Avatar {
-  border: none;
+	border: none;
+}
+
+.MainBox.FormScreen > h1, .MainBox.FormScreen > .AsteriskExplanation {
+	margin-left: 25.7%;
+}
+
+.MainBox.FormScreen > h1 {
+	font-size: 2em;
+	padding-bottom: 5px;
 }
 
 #ArticleTable.DataTable tbody td {
-  border: none;
+	border: none;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }
 
 .TicketZoom .Center.Last {
-  text-align: initial;
+	text-align: initial;
+}
+
+.TicketZoom .MessageBrowser p {
+	background-color: #f2f4f5;
+	border-radius: 3px;
 }
 
 span.ImportantArticles {
-  margin: 0px 5px 3px 0px !important;
+	margin: -3px 5px 0px 0px !important;
 }
 
 span.ImportantArticles i {
-  color: #19475b !important;
+	color: #19475b !important;
 }
 
 .TableSmall tbody td span.Direction.Incoming .fa-long-arrow-left, .DataTable tbody td span.Direction.Incoming .fa-long-arrow-left,
 .TableSmall tbody td span.Direction.Outgoing .fa-long-arrow-right, .DataTable tbody td span.Direction.Outgoing .fa-long-arrow-right {
-  color: #19475b;
-  font-size: initial;
+	color: #19475b;
+	font-size: initial;
 }
 
 .Handle.ui-resizable-handle {
-  border-top: 1px solid #e3e7ea;
+	border-top: 1px solid #e3e7ea;
 }
 
 /* Border radius for each corner. */
-#ArticleTable.DataTable tbody td:first-child,
 .CustomerContainer .BoxLabel, .CcCustomerContainer .BoxLabel, .BccCustomerContainer .BoxLabel,
 .OverviewMedium li:first-child, #Navigation > .Active > ul > li:first-child,
-.Dialog > .Header {
-  border-top-left-radius: 3px;
-  -moz-border-radius-topleft: 3px;
-  -webkit-border-top-left-radius: 3px;
+.Dialog > .Header, #OverviewBody.Overview.TicketList table.TableSmall.NoCellspacing thead tr:first-child th:first-child,
+.OverviewLarge .Preview li:first-child h3 {
+	border-top-left-radius: 3px;
 }
 
-#ArticleTable.DataTable tbody td:last-child,
 .OverviewMedium li:first-child, #Navigation > .Active > ul > li:first-child,
-.Dialog > .Header {
-  border-top-right-radius: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-right-radius: 3px;
+.Dialog > .Header, #OverviewBody.Overview.TicketList table.TableSmall.NoCellspacing thead tr:first-child th:last-child,
+.OverviewLarge .Preview li:first-child h3, .ArticleAttachments li div a:first-child:last-child {
+	border-top-right-radius: 3px;
 }
 
 #OverviewBody.Overview.TicketList table.TableSmall.NoCellspacing tbody tr:last-child td:first-child,
-#ArticleTable.DataTable tbody td:first-child, body.Visible-ScreenXL #ToolBar li.UserAvatar div a:last-child:hover,
+body.Visible-ScreenXL #ToolBar li.UserAvatar div a:last-child:hover,
 .CustomerContainer .BoxLabel, .CcCustomerContainer .BoxLabel, .BccCustomerContainer .BoxLabel,
 .OverviewMedium li:last-child, #Navigation > .Active > ul > li:last-child,
-.Dialog > .Footer, div.InputField_ToolbarContainer {
-  border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  -webkit-border-bottom-left-radius: 3px;
+.Dialog > .Footer, div.InputField_ToolbarContainer, .OverviewLarge .Preview li:last-child h3 {
+	border-bottom-left-radius: 3px;
 }
 
 #OverviewBody.Overview.TicketList table.TableSmall.NoCellspacing tbody tr:last-child td:last-child,
-#ArticleTable.DataTable tbody td:first-child, body.Visible-ScreenXL #ToolBar li.UserAvatar div a:last-child:hover,
-#ArticleTable.DataTable tbody td:last-child, #Navigation > .Active > ul > li:last-child,
-.OverviewMedium li:last-child,
-.Dialog > .Footer, div.InputField_ToolbarContainer {
-  border-bottom-right-radius: 3px;
-  -moz-border-radius-bottomright: 3px;
-  -webkit-border-bottom-right-radius: 3px;
+body.Visible-ScreenXL #ToolBar li.UserAvatar div a:last-child:hover, #Navigation > .Active > ul > li:last-child,
+.OverviewMedium li:last-child, .Dialog > .Footer, div.InputField_ToolbarContainer, .OverviewLarge .Preview li:last-child h3,
+.ArticleAttachments li div a:first-child:last-child {
+	border-bottom-right-radius: 3px;
 }
 
 .UseArticleColors #ArticleTable thead a {
-  color: #757575;
+	color: #757575;
 }
 
 .UseArticleColors tr:hover > td {
-  background-color: #d0e3fa !important
+	background-color: #d0e3fa !important
 }
 
 .UseArticleColors td, .UseArticleColors tr:nth-child(even) td {
-  border: none;
+	border: none;
 }
 
 .OverviewBox > h1 {
-  color: #444444;
+	color: #444444;
 }
 
 .OverviewControl {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .ControlRow {
-  background-color: #f2f4f5;
+	background-color: #f2f4f5;
+	min-height: 0px;
 }
 
 .ControlRow li:hover {
-  background: transparent;
+	background: transparent;
 }
 
 .ControlRow li.Active, .ControlRow li.Active:hover, .ControlRow li.Active:active {
-  background: transparent;
+	background: transparent;
 }
 
 .OverviewZoom a {
-  background: #f2f4f5;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  font-size: 1em;
-  font-weight: bold;
+	background: #f2f4f5;
+	border-radius: 3px;
+	font-size: 1em;
+	font-weight: bold;
 }
 
 .OverviewZoom .Active a {
-  background: #19475b;
+	background: #19475b;
 }
 
 .OverviewZoom a:hover, .OverviewZoom .Active a:hover {
-  background: #028b8b;
-  color:#ffffff;
+	background: #028b8b;
+	color:#ffffff;
 }
 
 .OverviewMedium li, .OverviewMedium li:last-child .Content,
 .OverviewLarge li, .OverviewLarge li:last-child .Content {
-  border: none !important;
+	border: none !important;
 }
 
 .OverviewMedium li:not(:last-child) .Content,
 .OverviewLarge li:not(:last-child) .Content {
-  border: none;
-  border-bottom: 1px solid #e3e7ea;
+	border: none;
+	border-bottom: 1px solid #e3e7ea;
 }
 
 .OverviewMedium > li:nth-child(even), .OverviewMedium > li:nth-child(odd),
 .OverviewLarge > li:nth-child(even), .OverviewLarge > li:nth-child(odd) {
-  background-color: transparent;
+	background-color: transparent;
 }
 
 .OverviewMedium li ul.InlineActions, .OverviewLarge li ul.InlineActions {
-  background-color: transparent;
-  box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
-  -webkit-box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
-  border-radius: 3px !important;
-  -webkit-border-radius: 3px !important;
-  margin-top: -2px;
+	background-color: transparent;
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
+	border-radius: 3px !important;
+	margin-top: -2px;
 }
 
 .OverviewLarge .Preview > ul {
-  border: 1px solid #e3e7ea;
-  padding: 0;
+	border: 1px solid #e3e7ea;
+	padding: 0;
 }
 
 .OverviewLarge .Preview h3 {
-  border: 1px solid transparent;
-  border-bottom: 1px solid #e3e7ea;
-  background: #f2f4f5;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #e3e7ea;
+	background: #f2f4f5;
+}
+
+.OverviewLarge .Preview li:last-child h3 {
+	border-bottom: none;
 }
 
 .OverviewLarge .Preview li.Active h3 {
-  background: #ffffff;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #e3e7ea;
+	background: #ffffff;
+	border: 1px solid transparent;
+	border-bottom: 1px solid #e3e7ea;
+}
+
+.OverviewLarge .Preview li div.HiddenBlock {
+	border-right: none;
 }
 
 .OverviewMedium li ul.InlineActions li a,
 .OverviewLarge > li ul.InlineActions li a {
-  color: #444444;
+	color: #444444;
+}
+
+.OverviewMedium div.Flag, .OverviewLarge div.Flag {
+	border: 1px solid transparent;
+}
+
+.Flag span[class^="PriorityID-"] {
+	border-radius: 3px;
 }
 
 .OverviewLarge .ItemActions {
-  background: transparent;
-  border-bottom: 1px solid #e3e7ea;
+	background: transparent;
+	border-bottom: 1px solid #e3e7ea;
 }
 
 ul.ContextFunctions li.ContextSettings .fa {
-  color: #19475b;
+	color: #19475b;
 }
 
 ul.ContextFunctions li.ContextSettings .fa.fa-trash-o {
-  color: #d55c4b;
+	color: #d55c4b;
 }
 
 ul.ContextFunctions li.ContextSettings:hover .fa {
-  color: #028b8b;
+	color: #028b8b;
 }
 
 .Cluster ul ul {
-  background: #fff !important;
+	background: #ffffff !important;
+	box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 1px 1px -1px rgba(0,0,0,0.12), 0 0px 3px 0 rgba(0,0,0,0.2);
+	border-radius: 3px !important;
+}
+
+.Cluster ul ul li {
+	border-bottom: none !important;
+}
+
+.Cluster ul ul li a:hover {
+	background: #D0E3FA !important;
 }
 
 .WidgetSimple .WidgetMessage.Warning {
-  background: #D0E3FA;
-  border-color: transparent;
-  color: #000000;
+	background: #D0E3FA;
+	border-color: transparent;
+	color: #212121;
 }
 
 #ArticleTableBody .Scroller, .TableSmall {
-  border: none;
+	border: none;
 }
 
 .FieldExplanation {
-  margin: 5px 3px;
+	margin: 5px 3px;
+}
+
+.ArticleAttachments li {
+	border-radius: 3px;
+	background: #f2f4f5;
+}
+
+ul.ArticleAttachments .fa.fa-download {
+	color: #ffffff;
+	/* color: #19475b; */
+}
+
+ul.ArticleAttachments .fa.fa-download:hover {
+	color: #ffffff;
+	/* color: #028b8b; */
+}
+
+.ArticleAttachments li div a {
+	background: #028b8b;
+}
+
+.ArticleAttachments li div a:hover {
+	background: #4ecac2;
+}
+
+/* Process ticket */
+#ActivityDialogContent .Centered, #ActivityDialogContent .LayoutPopup > .Content {
+	padding: 5px 0px 10px 0px;
+}
+
+.SubmitInfo {
+	background: transparent !important;
+	border: none !important;	
+}
+
+#ActivityDialogContent .Centered {
+	padding-bottom: 10px;
+}
+
+.WidgetSimple > .Content.ProcessInfo fieldset .FieldContainer {
+	background-color: #f2f4f5 !important;
+	border-radius: 3px;
+}
+
+.LightRow.Bottom {
+	background-color: #f2f4f5 !important;
+	border-bottom: none;
+}
+
+.WidgetSimple > .Content.ProcessInfo fieldset .FieldContainer label {
+	border-bottom: none !important;
+	text-shadow: none !important;
+	font-weight: 600 !important;
+	color: #444444 !important;
+}
+
+.WidgetSimple > .Content.ProcessInfo fieldset .FieldContainer p {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.FieldSetSeparator {
+	border-bottom: none !important;
+}
+
+label.Mandatory[for=ProcessEntityID] {
+	width: 29%;
+}
+
+.FieldHelpContainer > span {
+	background-color: #19475b !important;
+	text-shadow: none !important;
+	opacity: 0.95 !important;
+}
+
+.FieldHelpContainer .FieldHelpTrigger {
+	color: #19475b !important;
+}
+
+.FieldHelpContainer .FieldHelpTrigger:hover {
+	cursor: pointer;
+}
+
+.Spacing {
+	margin: 5px;
 }
 
 /* Calendar */
 #OverviewControl .ActionRow {
-  background: #f2f4f5;
+	background: #f2f4f5;
+}
+
+.fc .fc-button-group>* {
+	margin: 0px 4px 0 -1px !important;
+}
+
+.fc-unthemed td {
+	border-color: #e3e7ea !important;
+}
+
+.fc button {
+	background: #f2f4f5 !important;
+	border: 1px transparent !important;
+	border-radius: 3px !important;
+	text-shadow: none !important;
+}
+
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active {
+	color: #ffffff !important;
+	background: #1a475a !important;
+}
+
+.fc-state-down, .fc-state-active {
+	box-shadow: none !important;
+}
+
+.fc-icon-left-single-arrow:after, .fc-icon-right-single-arrow:after {
+	color: #19475b;
+}
+
+.fc-view table thead.fc-head th.fc-widget-header {
+	color: #757575 !important;
+	font-size: 1em !important;
+	font-weight: bold !important;
+	text-transform: none !important;
+	border: 1px solid transparent;
 }
 
 /* jQuery Datepicker */
 .DatepickerIcon {
-  color: #19475b;
+	color: #19475b;
+}
+
+.ui-datepicker td {
+	padding: 4px 6px !important;
+}
+
+#ui-datepicker-div a.ui-state-default {
+	box-shadow: none !important;
 }
 
 .ui-datepicker .ui-datepicker-header {
-  background: transparent !important;
+	background: transparent !important;
+}
+
+.ui-datepicker th {
+	font-weight: normal !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background: transparent !important;
+}
+
+.ui-widget-content .ui-state-default {
+	border: none !important;
+	border-radius: 3px !important;
+}
+
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev {
+	cursor: pointer;
+}
+
+.ui-datepicker .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-prev:hover {
+	border: none !important;
+	background: transparent !important;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+	top: 1px !important;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	right: 1px !important;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left: 1px !important;
+}
+
+.ui-icon-circle-triangle-e {
+	background-position: -31px 0px !important;
+}
+
+.ui-icon-circle-triangle-w {
+	background-position: -96px 0px !important;
+}
+
+td.ui-datepicker-today:not(.ui-datepicker-days-cell-over) a.ui-state-default {	/* Today. */
+	color: #d55c4b;
+}
+
+td.ui-datepicker-days-cell-over, td.ui-datepicker-current-day {	/* Selected day. */
+	background: #4d90fe !important;
+	border-radius: 10px !important;
+}
+
+.ui-datepicker-days-cell-over:not(.Highlight) a.ui-state-default {
+	color: #ffffff;
+}
+
+.ui-datepicker-days-cell-over.Highlight a.ui-state-default {	/* Holiday */
+	color: #f8f32b;
+}
+
+.ui-datepicker td.Highlight a.ui-state-default {
+	background: transparent !important;
+}
+
+.ui-datepicker td.Highlight:not(.ui-datepicker-days-cell-over) {
+	background: #f8f32b;
+	border-radius: 10px;
 }
 
 /* Settings */
 .WidgetSimple.Setting .Content .SettingUpdateBox {
-  background-color: #ffffff !important;
+	background-color: #ffffff !important;
 }
 
 .WidgetSimple.Setting .Header h2 {
-  padding-left: 13px !important
+	padding-left: 13px !important
 }
 
 .Setting.IsLockedByMe .NotificationList tbody tr input {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 
 /* Admin */
 .ItemListGrid > li {
-  width: 19.3%;
-  min-width: 305px;
-  border: none !important;
+	width: 19.3%;
+	min-width: 305px;
+	border: none !important;
 }
 
 .ItemListGrid.WithIcons > li {
-  height: 50px;
+	height: 50px;
 }
 
 .ItemListGrid.WithIcons > li > a {
-  padding-top: 9px;
-  padding-right: 5px;
-  background: transparent;
-  border: none;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
+	padding-top: 9px;
+	padding-right: 5px;
+	background: transparent;
+	border: none;
+	border-radius: 3px;
 }
 
 .ItemListGrid > li > a {
-  font-weight: 500;
-  text-align: left !important;
-  padding-left: 55px;
-  height: 50px;
+	font-weight: 500;
+	text-align: left !important;
+	padding-left: 55px;
+	height: 50px;
 }
 
 .ItemListGrid > li > a > .Favourite {
-  top: 15px !important;
+	top: 15px !important;
 }
 
 .ItemListGrid > li > a:not(.Disabled):hover, .ItemListGrid > li > a:not(.Disabled):active, 
 .ItemListGrid > li > a:not(.Disabled):focus, .ItemListGrid > li > a.Active {
-  background: #D0E3FA;
-  border: none;
+	background: #D0E3FA;
+	border: none;
 }
 
 .ItemListGrid.WithIcons > li a:not(.Disabled):hover span.Icons, .ItemListGrid.WithIcons > li a.Active span.Icons,
 .ItemListGrid.WithIcons > li a:not(.Disabled) span.Icons, .ItemListGrid.WithIcons > li a.Active span.Icons i.Icon2 {
-  background: transparent;
+	background: transparent;
 }
 
 .ItemListGrid.WithIcons > li a:not(.Disabled) span.Icons i {
-  color: #19475b;
+	color: #19475b;
 }
 
 .ItemListGrid.WithIcons > li a:not(.Disabled) span.Icons i.Icon2,
 .ItemListGrid.WithIcons > li a:not(.Disabled):hover span.Icons i.Icon2 {
-  background: transparent;
-  color: #19475b;
+	background: transparent;
+	color: #19475b;
 }
 
 .ItemListGrid > li span.Icons {
-  left: 25px;
-  top: 5px;
-  width: 10px;
+	left: 25px;
+	top: 5px;
+	width: 10px;
 }
 
 .ItemListGrid > li span.Icons, .ItemListGrid.WithIcons > li span.Icons i.Icon2 {
-  border: none;
+	border: none;
 }
 
 .ItemListGrid > li span.Description {
-  width: inherit;
-  color: #757575;
+	width: inherit;
+	color: #757575;
 }
 
 .ItemListGrid > li span.Title {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .ItemListGrid > li.IsFavourite > a {
-  background-color: #e9ecec;
-  box-shadow: 0px 0px 0px transparent !important;
+	background-color: #e9ecec;
+	box-shadow: 0px 0px 0px transparent !important;
 }
 
 .ItemListGrid > li > a:hover > .Favourite:hover .fa {
-  color: #19475b !important;
+	color: #19475b !important;
 }
 
 .ItemListGrid > li > a:hover > .Favourite .fa {
-  color: #19475b;
+	color: #19475b;
 }
 
 #CommunicationList > .Content > .ControlRow {
-  background: transparent;
+	background: transparent;
 }
 
 .SearchBox button {
-  background: #ffffff;
-  border: 1px solid #e3e7ea;
-  border-left: none;
-  text-shadow: none;
+	background: #ffffff;
+	border: 1px solid #e3e7ea;
+	border-left: none;
+	text-shadow: none;
 }
 
 .SearchBox button:hover {
-  border-color: #e3e7ea;
+	border-color: #e3e7ea;
 }
 
 .IntroInstall {
-  background: transparent !important;
+	background: transparent !important;
+	border-radius: 3px;
 }
 
 .WidgetSimple .WidgetMenu:not(.Hidden) {
-  background: #fff !important;
-  border-bottom: 1px solid #e3e7ea !important;
+	background: #ffffff !important;
+	border-bottom: 1px solid #e3e7ea !important;
 }
 
 .GettingStarted li {
-  background: #f2f4f5;
-  border: 1px solid #e3e7ea;
+	background: #f2f4f5;
+	border: 1px solid #e3e7ea;
 }
 
 .DataTable tr td.Highlight:last-child {
-  background: transparent;
+	background: transparent;
 }
 
+#ConfigTree .jstree-InputField-Tree .jstree-wholerow, .jstree-InputField .jstree-wholerow-ul .jstree-wholerow {
+	border-radius: 3px;
+}
+
+/* Not working */
+/* #ConfigTree .jstree-wholerow-hovered {
+	background: #e3e7ea !important;
+} */
+
+/* Responsive */
 @media only screen and (max-width: 1024px) and (min-width: 0px) {
-  #Header {
-    background: #19475b;
-  } 
-  #AppWrapper > div.MainBox.Dashboard.ARIARoleMain.LayoutFixedSidebar.SidebarLast > div.ResponsiveSidebarContainer > div, 
-  .LayoutFixedSidebar.SidebarFirst .ResponsiveSidebarContainer > .SidebarColumn, #NavigationContainer, .RTL #NavigationContainer {
-    background: #19475b !important;
-  }
+	#Header {
+		background: #19475b;
+	}
 
-  .LayoutFixedSidebar.SidebarLast .ResponsiveSidebarContainer > .SidebarColumn, .LayoutFixedSidebar.SidebarFirst .ResponsiveSidebarContainer > .SidebarColumn {
-    background: #19475b !important;
-  }
+	#Navigation {
+		padding-left: 10px;
+	}
 
-  #NavigationContainer ul li {
-    border: 1px solid transparent !important;
-  }
+	#Navigation > li:hover > a:after {
+		background: transparent;
+	}
 
-  #Navigation > li > a {
-    color: #ffffff !important;
-  }
+	#AppWrapper > div.MainBox.Dashboard.ARIARoleMain.LayoutFixedSidebar.SidebarLast > div.ResponsiveSidebarContainer > div, 
+	.LayoutFixedSidebar.SidebarFirst .ResponsiveSidebarContainer > .SidebarColumn, #NavigationContainer, .RTL #NavigationContainer {
+		background: #19475b !important;
+	}
 
-  .ResponsiveHandle {
-    color: #028b8b !important;
-    background-color: transparent !important;
-  }
+	.LayoutFixedSidebar.SidebarLast .ResponsiveSidebarContainer > .SidebarColumn, .LayoutFixedSidebar.SidebarFirst .ResponsiveSidebarContainer > .SidebarColumn {
+		background: #19475b !important;
+	}
 
-  #ToolBar, .RTL #ToolBar {
-    background: #19475b !important;
-  }
+	#NavigationContainer ul li {
+		border: 1px solid transparent !important;
+	}
 
-  #ToolBar li.UserAvatar div {
-    box-shadow: none !important;
-    background: transparent !important;
-  }
+	#Navigation > li > a {
+		color: #ffffff !important;
+	}
 
-  #ToolBar li i {
-    color: #ffffff !important;
-  }
+	.ResponsiveHandle {
+		color: #028b8b !important;
+		background-color: transparent !important;
+	}
 
-  .ItemListGrid.WithIcons > li > a {
-    padding-top: 3px;
-  }
+	#ToolBar, .RTL #ToolBar {
+		background: #19475b !important;
+	}
+
+	#ToolBar li.UserAvatar div {
+		box-shadow: none !important;
+		background: transparent !important;
+	}
+
+	#ToolBar li i {
+		color: #ffffff !important;
+	}
+
+	.ItemListGrid.WithIcons > li > a {
+		padding-top: 3px;
+	}
+
+	form#NewPhoneTicket, form#NewEmailTicket,
+	#ActivityDialogContent .LayoutPopup > .Content {
+		padding: 0px 5px 5px 5px !important;
+	}
 }
