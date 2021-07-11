@@ -8,8 +8,8 @@
 	<!ENTITY database_de "<![CDATA[<li><i>Keine</i></li>]]>">
 	<!ENTITY database_uninstall_en "<![CDATA[<li><i>None</i></li>]]>">
 	<!ENTITY database_uninstall_de "<![CDATA[<li><i>Keine</i></li>]]>">
-	<!ENTITY deployment_en "<![CDATA[<ul><li>Change your logo under <a href='/index.pl?Action=AdminSystemConfiguration;Subaction=View;Setting=AgentLogoCustom&#37;23&#37;23&#37;23ModernSkin' target='_blank'><strong>AgentLogoCustom###ModernSkin</strong></a></li><li>To make this the default skin for agents: change 'default' to 'ModernSkin' under <a href='/index.pl?Action=AdminSystemConfiguration;Subaction=View;Setting=Loader::Agent::DefaultSelectedSkin' target='_blank'><strong>Loader::Agent::DefaultSelectedSkin</strong></a></li></ul>]]>">
-	<!ENTITY deployment_de "<![CDATA[<ul><li>Ändern Sie Ihr Logo unter <a href='/index.pl?Action=AdminSystemConfiguration;Subaction=View;Setting=AgentLogoCustom&#37;23&#37;23&#37;23ModernSkin' target='_blank'><strong>AgentLogoCustom###ModernSkin</strong></a></li><li>Um diesen Skin zum Standard-Skin zu machen: ändern Sie 'default' zu 'ModernSkin' unter <a href='/index.pl?Action=AdminSystemConfiguration;Subaction=View;Setting=Loader::Agent::DefaultSelectedSkin' target='_blank'><strong>Loader::Agent::DefaultSelectedSkin</strong></a></li></ul>]]>">
+	<!ENTITY deployment_en "<![CDATA[<ul><li>Change your logo under <strong>AgentLogoCustom###ModernSkin</strong></li><li>To make this the default skin for agents: change 'default' to 'ModernSkin' under <strong>Loader::Agent::DefaultSelectedSkin</strong></li></ul>]]>">
+	<!ENTITY deployment_de "<![CDATA[<ul><li>Ändern Sie Ihr Logo unter <strong>AgentLogoCustom###ModernSkin</strong></li><li>Um diesen Skin zum Standard-Skin zu machen: ändern Sie 'default' zu 'ModernSkin' unter <strong>Loader::Agent::DefaultSelectedSkin</strong></li></ul>]]>">
 	<!ENTITY uninstall_en "<![CDATA[<li>Nothing. The setting Loader::Agent::DefaultSelectedSkin will be reset if 'ModernSkin' was selected.</li>]]>">
 	<!ENTITY uninstall_de "<![CDATA[<li>Nichts. Die Einstellung Loader::Agent::DefaultSelectedSkin wird zurückgesetzt, wenn sie auf 'ModernSkin' stand.</li>]]>">
 	<!ENTITY feedback_en "<![CDATA[Help us improve this add-ons by writing a review, reporting a bug, or submitting a feature request on the <a href='https://portal.efflux.de/' target='_blank'><strong>Customer Portal</strong></a>.]]>">
@@ -18,15 +18,15 @@
 ]>
 <otrs_package version="1.0">
 	<Name>&internal_name;</Name>
-	<Version>6.0.3</Version>
+	<Version>6.0.4</Version>
 	<Framework>6.0.x</Framework>
-	<PackageIsDownloadable>0</PackageIsDownloadable>
 	<Vendor>Efflux GmbH</Vendor>
 	<URL>https://efflux.de/</URL>
 	<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
 	<Description Lang="en">&description_en;</Description>
 	<Description Lang="de">&description_de;</Description>
-  <ChangeLog Version="6.0.3" Date="2020-04-27">Rework of: forms, editor, datepicker, placeholder, multiselect, and much more. Added automatically change of DefaultSelectedSkin on uninstall.</ChangeLog>
+	<ChangeLog Version="6.0.4" Date="2021-07-12">Standardized styling. Added CSS variables (IE support drop). Changed color pattern and fonts. Rework of: editors, attachments, pop-ups, footers, and much more. Fixed overflow of nav bar (thanks to Radiant System).</ChangeLog>
+	<ChangeLog Version="6.0.3" Date="2020-04-27">Rework of: forms, editor, datepicker, placeholder, multiselect, and much more. Added automatically change of DefaultSelectedSkin on uninstall.</ChangeLog>
 	<ChangeLog Version="6.0.2" Date="2019-10-07">Complete rework of the desin.</ChangeLog>
 	<ChangeLog Version="6.0.1" Date="2019-08-31">Release for OTRS 6.</ChangeLog>
 	<Filelist>
