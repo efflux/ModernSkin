@@ -607,7 +607,7 @@ span.Pagination a:hover:not(.Selected) {
 
 .TableSmall tbody tr.Active td, .DataTable tbody tr.Active td {
     color: var(--color-txt-main) !important;
-    background-color: var(--color-bg-hover) !important;
+    background-color: var(--color-bg-field) !important;
 }
 
 /* Exception for article table. */
@@ -1345,7 +1345,7 @@ div.Headline {
 
 .Avatar {
     border: none;
-    background: var(--color-bg-field);
+    background: var(--color-bg-light);
     border-radius: var(--border-radius);
 }
 
