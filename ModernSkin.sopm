@@ -18,13 +18,14 @@
 ]>
 <otrs_package version="1.0">
 	<Name>&internal_name;</Name>
-	<Version>6.0.5</Version>
+	<Version>6.0.6</Version>
 	<Framework>6.0.x</Framework>
 	<Vendor>Efflux GmbH</Vendor>
 	<URL>https://efflux.de/</URL>
 	<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
 	<Description Lang="en">&description_en;</Description>
 	<Description Lang="de">&description_de;</Description>
+	<ChangeLog Version="6.0.6" Date="2021-07-13">Changed color of invalid fields, better design for DnD areas and some minor changes.</ChangeLog>
 	<ChangeLog Version="6.0.5" Date="2021-07-12">Minor changes to the last version.</ChangeLog>
 	<ChangeLog Version="6.0.4" Date="2021-07-12">Standardized styling. Added CSS variables (IE support drop). Changed color pattern and fonts. Rework of: editors, attachments, pop-ups, footers, and much more. Fixed overflow of nav bar (thanks to Radiant System).</ChangeLog>
 	<ChangeLog Version="6.0.3" Date="2020-04-27">Rework of: forms, editor, datepicker, placeholder, multiselect, and much more. Added automatically change of DefaultSelectedSkin on uninstall.</ChangeLog>

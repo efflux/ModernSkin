@@ -21,7 +21,7 @@
     --color-txt-main-hover: #000000;   /* Hover on default text */
     --color-txt-light: #767676;  /* Lighter text and placeholder */
     --color-txt-invalid: #a9a9a9;  /* Even lighter text for invalid settings */
-    --color-bg-invalid: #dddddd;
+    --color-bg-invalid: #e1e6e9;
 
     --color-border-active: #4d90fe;
 
@@ -1041,6 +1041,11 @@ fieldset.TableLike > .Field > input, fieldset.TableLike > .Row > .Field > input 
     color: var(--color-txt-main);
 }
 
+.LayoutPopup.ARIARoleMain fieldset.TableLike > .Field > select, .LayoutPopup.ARIARoleMain fieldset.TableLike > .Row > .Field > select,
+.LayoutPopup.ARIARoleMain fieldset.TableLike > .Field > input, .LayoutPopup.ARIARoleMain fieldset.TableLike > .Row > .Field > input {
+    background: var(--color-theme);
+}
+
 fieldset.TableLike > .Field label, fieldset.TableLike > .Row > .Field label {
     color: var(--color-txt-light);
 }
@@ -1664,6 +1669,11 @@ ul.ContextFunctions li.ContextSettings:hover .fa {
     cursor: pointer;
 }
 
+.DnDUpload.AjaxDnDUploadReady.DragOver {
+    border: 1px dashed var(--color-border-active) !important;
+    background-color: var(--color-bg-light) !important;
+}
+
 .fa.fa-download:hover, td i:hover, td a i:hover, .AjaxDnDUploadReady:hover > i.fa.fa-download {
     color: var(--color-icon-light) !important;
 }
@@ -2025,6 +2035,11 @@ input[type=text], input[type=password], input[type=email], textarea {
 .IsLockedByMe .SettingContent input[type=text][readonly], .IsLockedByMe .SettingContent input[type=password][readonly],
 .IsLockedByMe .SettingContent .InputField_Search[readonly], .IsLockedByMe .Setting input.Key[readonly] {
     box-shadow: none !important;
+}
+
+.IsLockedByMe .SettingContent input[type=text], .IsLockedByMe .SettingContent input[type=password],
+.IsLockedByMe .SettingContent .InputField_Search, .IsLockedByMe .Setting input.Key {
+    box-shadow: inset 1px 1px 3px var(--color-bg-field), inset -1px -1px 3px var(--color-bg-field) !important;
 }
 
 .SettingContent .Array {
